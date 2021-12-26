@@ -1,0 +1,24 @@
+.product {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  margin: 10px;
+  padding: 0 10px;
+}
+.product-left,
+.product-right {
+  margin: 0 10px;
+  padding: 0 10px;
+}
+.product-right .product-name {
+  font-weight: 400;
+  color: blue;
+}
+.cart {
+  background-color: goldenrod;
+  width: 230px;
+  height: 30px;
+  border: 1px solid gray;
+  margin-bottom: 25px;
+  cursor: pointer;
+  border-radius: 5px;
+}
