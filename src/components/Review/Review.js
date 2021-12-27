@@ -1,3 +1,4 @@
+import { CircularProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import fakeData from '../../fakeData/products.json';
@@ -46,6 +47,11 @@ const Review = () => {
     return (
         <div className='shop-container'>
             <div className="product-container">
+                {
+                    cart.length === 0 && <div style={{marginTop: '20%', textAlign: 'center'}}>
+                        <CircularProgress disableShrink color="secondary" />
+                    </div>
+                }
                 {
                     cart.map(product => <CartReview removeProductHandler={removeProductHandler} key={product.key} product={product}></CartReview>)
                 }
